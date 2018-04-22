@@ -1,0 +1,16 @@
+{
+  "name": "hexo-theme-wen",
+  "version": "0.0.1",
+  "description": "A hexo theme inspired by Todd Motto.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "hexo",
+    "theme",
+    "wen"
+  ],
+  "author": "Hopsken",
+  "license": "MIT"
+}

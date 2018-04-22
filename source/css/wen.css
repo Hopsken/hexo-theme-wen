@@ -1,0 +1,529 @@
+/* @通用 */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 10px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #111;
+}
+
+img {
+    border: 0;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 260px;
+    padding: 30px 0;
+    color: #fff;
+    background-color: #283149;
+}
+
+.logo {
+    padding: 0 20px;
+}
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.logo-tm {
+    display: block;
+    height: 60px;
+}
+
+.logo-tm img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    margin-right: 15px;
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+.logo-tm>div {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.logo-tm h3 {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 300;
+}
+
+.logo-tm h4 {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 100;
+}
+
+.social a {
+    display: block;
+    margin: 10px 0;
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-item a {
+    display: block;
+    padding: 12px 20px;
+    color: rgba(255, 255, 255, .7);
+    font-weight: 300;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.nav-item.active,
+.nav-item.active a {
+    font-weight: 400;
+    color: #fff;
+    background-color: rgba(255, 255, 255, .06);
+}
+
+.main {
+    margin-left: 260px;
+}
+
+.main-content {
+    margin: 0 auto;
+    padding: 0 40px;
+    font-size: 0;
+}
+
+.comment {
+    padding: 40px 40px;
+    padding-top: 0;
+}
+
+.pagination {
+    margin: 20px 0 20px;
+    height: 70px;
+    text-align: center;
+}
+
+.pagination-item {
+    display: inline-block;
+    height: 70px;
+    line-height: 70px;
+    list-style: none;
+    font-size: 16px;
+    padding: 0 10px;
+}
+
+.pagination-item a {
+    height: 70px;
+    line-height: 70px;
+    text-decoration: none;
+    color: rgba(38, 41, 58, .6);
+}
+
+.pagination-item.active a {
+    color: rgba(38, 41, 58, .9);
+}
+
+.footer {
+    padding-left: 40px;
+    height: 60px;
+    line-height: 60px;
+    color: rgba(255, 255, 255, .7);
+    background-color: #283149;
+}
+
+.footer a {
+    color: rgba(255, 255, 255, .9);
+}
+
+.clearfix:before,
+.clearfix::after {
+    display: table;
+    content: "";
+    clear: both;
+}
+
+@media only screen and (max-width: 980px) {
+    .header {
+        position: static;
+        text-align: center;
+        width: auto;
+        padding-bottom: 0;
+    }
+    .nav-item {
+        display: inline-block;
+        padding: 6px 0;
+    }
+    .nav-item.active,
+    .nav-item.active a {
+        background-color: #283149;
+    }
+    .main {
+        margin: 0 auto;
+    }
+}
+
+/* @首页文章列表 */
+
+.content>.post {
+    display: inline-block;
+    float: left;
+    height: 188px;
+    margin-top: 40px;
+    padding: 30px;
+    width: calc(50% - 10px);
+    font-size: 14px;
+    background-color: #fff;
+    border: 1px solid rgba(38, 41, 58, .1);
+    box-shadow: 0 1px 3px 0 rgba(38, 41, 58, .06);
+    text-decoration: none;
+    color: #111;
+}
+
+.post:first-of-type,
+.post:nth-of-type(2) {
+    margin-top: 0;
+}
+
+.post:nth-of-type(2n+1) {
+    margin-right: 20px;
+}
+
+.post-meta {
+    font-weight: 200;
+    color: rgba(38, 41, 58, .6);
+    font-size: 14px;
+}
+
+.post-title {
+    font-weight: 400;
+    font-size: 24px;
+    color: rgba(38, 41, 58, .8);
+    line-height: 28px;
+    margin: 10px 0 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.post-desc,
+.post-desc * {
+    position: relative;
+    margin: 10px 0;
+    font-size: 18px;
+    font-weight: 300;
+    color: rgba(38, 41, 58, .8);
+    max-height: 60px;
+    line-height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+@media only screen and (max-width: 740px) {
+    .content>.post {
+        width: 100%;
+    }
+    .post:nth-of-type(2) {
+        margin-top: 40px;
+    }
+}
+
+/* @文章页 */
+
+.content {
+    font-size: 14px;
+}
+
+.title h1 {
+    font-size: 3.2rem;
+    color: rgba(38, 41, 58, .8);
+    line-height: 4rem;
+    font-weight: 400;
+}
+
+.title span {
+    display: inline-block;
+    font-size: 1.4rem;
+    color: rgba(38, 41, 58, .6);
+    line-height: 1.8rem;
+    margin: 1rem .2rem;
+}
+
+.article {
+    margin-top: 2rem;
+}
+
+.article p,
+.article ul,
+.article ol {
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    margin-top: 2.5rem;
+    color: rgba(38, 41, 58, .8);
+}
+
+.article ul,
+.article ol {
+    margin-left: 2.5em;
+}
+
+.article h2 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 3rem;
+    padding-top: 1.5rem;
+    margin-bottom: -1rem;
+    color: rgba(38, 41, 58, .8);
+}
+
+.article h3 {
+    font-size: 2.2rem;
+    font-weight: 500;
+    line-height: 2.5rem;
+    padding-top: 1.2rem;
+    margin-bottom: -1.3rem;
+    color: rgba(38, 41, 58, .8);
+}
+
+.article h4 {
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 2.2rem;
+    padding-top: 1rem;
+    margin-bottom: -2.5rem;
+    color: rgba(38, 41, 58, .8);
+}
+
+.article h5 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 2rem;
+    padding-top: 1rem;
+    margin-bottom: -2.5rem;
+    color: rgba(38, 41, 58, .8);
+}
+
+.article h6 {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 2rem;
+    padding-top: 1rem;
+    margin-bottom: -2.5rem;
+    color: rgba(38, 41, 58, .8);
+}
+
+.article h2,
+.article h3,
+.article h4,
+.article h5,
+.article h6 {
+    position: relative;
+}
+
+.article h2::before,
+.article h3::before,
+.article h4::before,
+.article h5::before,
+.article h6::before {
+    position: absolute;
+    content: "#";
+    font-size: 1em;
+    left: -.7em;
+    color: #F73859;
+}
+
+.article a {
+    color: #F73859;
+}
+
+.article img {
+    display: block;
+    max-width: 100%;
+    margin: 1rem auto;
+}
+
+.article p>code,
+.archive li>code,
+.archive a>code {
+    background: rgba(58, 66, 80, .06);
+    color: #404B69;
+    padding: .3rem .6rem;
+    border-radius: .5rem;
+}
+
+/* 代码高亮 */
+.highlight {
+    padding: 40px;
+    border-radius: .5rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .5);
+    background-color: #283149;
+    margin: 3rem 0;
+    color: #fff;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    font-weight: 300;
+}
+.highlight pre .function .keyword,
+.highlight pre .constant {
+    color: #c680ff;
+}
+
+.highlight pre .keyword,
+.highlight pre .attribute {
+    color: #c680ff;
+}
+
+.highlight pre .number,
+.highlight pre .literal {
+    color: #c680ff;
+}
+
+.highlight pre .tag,
+.highlight pre .tag .title,
+.highlight pre .change,
+.highlight pre .winutils,
+.highlight pre .flow,
+.highlight pre .lisp .title,
+.highlight pre .clojure .built_in,
+.highlight pre .nginx .title,
+.highlight pre .tex .special {
+    color: #c680ff;
+}
+
+.highlight pre .symbol,
+.highlight pre .symbol .string,
+.highlight pre .value,
+.highlight pre .regexp {
+    color: #c680ff;
+}
+
+.highlight pre .title {
+    color: #c680ff;
+}
+
+.highlight pre .tag .value,
+.highlight pre .string,
+.highlight pre .subst,
+.highlight pre .haskell .type,
+.highlight pre .preprocessor,
+.highlight pre .ruby .class .parent,
+.highlight pre .built_in,
+.highlight pre .sql .aggregate,
+.highlight pre .django .template_tag,
+.highlight pre .django .variable,
+.highlight pre .smalltalk .class,
+.highlight pre .javadoc,
+.highlight pre .django .filter .argument,
+.highlight pre .smalltalk .localvars,
+.highlight pre .smalltalk .array,
+.highlight pre .attr_selector,
+.highlight pre .pseudo,
+.highlight pre .addition,
+.highlight pre .stream,
+.highlight pre .envvar,
+.highlight pre .apache .tag,
+.highlight pre .apache .cbracket,
+.highlight pre .tex .command,
+.highlight pre .prompt {
+    color: #c680ff;
+}
+
+.highlight pre .comment,
+.highlight pre .java .annotation,
+.highlight pre .python .decorator,
+.highlight pre .template_comment,
+.highlight pre .pi,
+.highlight pre .doctype,
+.highlight pre .shebang,
+.highlight pre .apache .sqbracket,
+.highlight pre .tex .formula {
+    color: #58b765;
+}
+
+.highlight pre .deletion {
+    color: #F73859;
+}
+
+.highlight pre .coffeescript .javascript,
+.highlight pre .javascript .xml,
+.highlight pre .tex .formula,
+.highlight pre .xml .javascript,
+.highlight pre .xml .vbscript,
+.highlight pre .xml .css,
+.highlight pre .xml .cdata {
+    opacity: 0.5;
+}
+
+/* 归档页 */
+
+.main-content,
+.archive {
+    margin: 0 auto;
+    padding: 0 40px;
+    margin-top: 40px;
+    font-size: 0;
+}
+
+.archive-year {
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #283149;
+}
+
+.archive-item {
+    display: inline-block;
+    float: left;
+    width: 25%;
+    margin-right: 40px;
+}
+
+@media only screen and (max-width: 780px) {
+    .archive-item {
+        width: 100%;
+        margin: 1.5rem 0;
+    }
+}
+
+.archive-item>a {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: rgba(5, 6, 10, 0.7);
+    line-height: 2rem;
+    text-decoration: none;
+}
+
+.archive-item>span {
+    display: block;
+    font-size: 1.6rem;
+    color: rgba(38, 41, 58, .5);
+    line-height: 1.6rem;
+    margin-top: .8rem;
+}

@@ -1,0 +1,20 @@
+header.header
+    .logo
+        a.logo-tm(href="/")
+            img(src=url_for(theme.logo), alt="logo")
+            div
+                h3 
+                    = config.author
+                h4 
+                    = theme.job ? theme.job : "Blogger"
+        //- .social
+        //-     a(href="twitter.com") Twitter
+    nav.nav(role="navigation")
+        ul.nav-list
+            each value, key in theme.menu
+                - var re = /^(http|https):\/\/*/gi;
+                - var target = re.test(value) ? "_blank" : "_self"
+                - var act = !re.test(value) && "/"+page.current_url === value
+                li.nav-item(class={active: act})
+                    a(href=url_for(value) target=target)
+                        != key.toUpperCase()

@@ -1,0 +1,211 @@
+body {
+    font-family: Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Noto Sans CJK SC,WenQuanYi Micro Hei,Arial,sans-serif;
+}
+div, p, span, h1, h2, h3, h4, h5, h6 {
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+}
+a {
+    text-decoration: none;
+}
+::selection {
+    color: #fff;
+    background-color: #D6C481;
+}
+.masthead {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 3px solid #D6C481;
+    text-align: center;
+    background-color: #fff;
+}
+.logo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+.nav {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.nav a {
+    margin: 0 10px 0 10px;
+    color: #373C38;
+    font-size: 20px;
+    text-decoration: none;
+}
+.nav a:hover, .nav-active {
+    border-bottom: 2px solid #D6C481;
+}
+
+.post-list {
+    display: block;
+    box-sizing: border-box;
+}
+.post {
+    width: 100%;
+    box-sizing: border-box;
+    display: inline-block;
+    background-color: #fff;
+    padding: 45px;
+}
+.post:hover {
+    background-color: #DCE5EB;
+}
+.post-excerpt-title a {
+    text-decoration: none;
+    font-size: 24px;
+    color: #373C38;
+}
+.post-excerpt-title::after {
+    content: '';
+    display: block;
+    width: 150px;
+    height: 2px;
+    background: #D6C481;
+}
+@media (min-width: 750px) {
+    .post {
+        width: 50%;
+        float: left;
+        padding: 50px;
+    }
+    .post-excerpt-title {
+        font-size: 30px;
+        line-height: 45px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+.post-preview {
+    height: 135px !important;
+    overflow: hidden !important;
+    font-size: 23px;
+    line-height: 35px;
+    color: #787878;
+}
+.post-preview a {
+    color: #787878;
+}
+.post-preview > h1,
+.post-preview > h2,
+.post-preview > h3,
+.post-preview > h4,
+.post-preview > h5,
+.post-preview > h6 {
+    display: none;
+}
+.post-info {
+    font-size: 16px;
+    line-height: 40px;
+    color: #787878;
+}
+.clear {
+    clear: both;
+}
+
+
+/* Article */
+.post-title {
+    font-size: 40px;
+    line-height: 45px;
+    color: #373C38;
+}
+@media (max-width: 750px) {
+    .article {
+        padding: 35px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+.article {
+    margin: 0 auto;
+    max-width: 850px;
+    color: #2E383F;
+    font-size: 20px;
+    line-height: 32px;
+}
+.post-content a, .toc a {
+    color: #07617D;
+}
+pre, code {
+    font-size: 20px;
+    background-color: #fafbfc;
+    border: 1px solid #e1e4e8;
+}
+.post-content > table {
+    margin: 1em 40px;
+    font-size: 1em;
+    line-height: 1.8em;
+    border-collapse: collapse;
+}
+.post-content > table thead tr {
+    background: #f8f8f8;
+}
+.post-content > table th, .post-content > table td {
+    border: 1px solid #dedede;
+    padding: 0 10px;
+}
+.post-content h1 {font-size: 32px; margin: 1em 0; position: relative;}
+.post-content h2 {font-size: 28px; margin: 1em 0; position: relative;}
+.post-content h3 {font-size: 28px; margin: 1em 0; position: relative;}
+.post-content h4 {font-size: 24px; margin: 1em 0; position: relative;}
+.post-content h5 {font-size: 24px; margin: 1em 0; position: relative;}
+.post-content h6 {font-size: 20px; margin: 1em 0; position: relative;}
+.post-content h2:before, .post-content h3:before, .post-content h4:before, .post-content h5:before, .post-content h6:before {
+    content: "#";
+    color: #D6C481;
+    position: absolute;
+    left: -0.7em;
+    top: -4px;
+    font-size: 1em;
+}
+
+.post-tags {
+    float: right;
+    font-size: 20px;
+    line-height: 40px;
+    margin: 2rem 0;
+}
+.post-tags a {
+    margin: 0 1rem;
+    background-color: #D6C481;
+    color: #fff;
+    padding: 5px;
+}
+
+
+/* Footer */
+footer {
+    margin: 50px auto;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #787878;
+}
+@media (min-width: 750px) {
+    footer {
+        font-size: 20px;
+        line-height: 35px;
+    }
+}
+footer a {
+    color: #787878;
+}
+
+/* Pagination */
+.pager {
+    display: block;
+    list-style: none;
+    text-align: center;
+}
+.pager li {
+    display: inline-block;
+}
+.pager a {
+    padding: 10px;
+    margin: 0 20px;
+    color: #fff;
+    background-color: #D6C481;
+}
