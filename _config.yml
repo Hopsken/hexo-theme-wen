@@ -1,0 +1,16 @@
+menu:
+  Home: /
+  Archives: /archives
+  Github: https://github.com/hopsken
+  RSS: /atom.xml
+
+favicon: /assets/hopsken.jpg
+logo: /assets/hopsken.jpg
+
+
+disqus: 
+gitment:
+  github_id: 
+  repo: 
+  client_id: 
+  client_secret: 
