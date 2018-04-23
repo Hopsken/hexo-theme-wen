@@ -13,17 +13,18 @@
             })();
         script(id='dsq-count-scr' src='//#{theme.disqus}.disqus.com/count.js' async)
 
-    if theme.gitment
+    if theme.gitment.enable
         #gitment
         link(rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css")
         script(src="https://imsun.github.io/gitment/dist/gitment.browser.js")
-        script
-            | var gitment = new Gitment({
-            != 'owner:"' + theme.gitment.github_id + '",'
-            != 'repo:"' + theme.gitment.repo + '",'
-            | oauth: {
-            != 'client_id:"' + theme.gitment.client_id + '",'
-            != 'client_secret:"' + theme.gitment.client_secret + '",'
-            | },
-            | })
-            | gitment.render('gitment')
+        script.
+            var gitment = new Gitment({
+                id: '#{page.path}',
+                owner: '#{theme.gitment.github_id}',
+                repo: '#{theme.gitment.repo}',
+                oauth: {
+                    client_id: '#{theme.gitment.client_id}',
+                    client_secret: '#{theme.gitment.client_secret}',
+                },
+            })
+            gitment.render('gitment')

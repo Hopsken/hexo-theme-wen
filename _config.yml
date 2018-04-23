@@ -7,9 +7,12 @@ menu:
 favicon: /assets/hopsken.jpg
 logo: /assets/hopsken.jpg
 
-
+# 评论
+# 多说
 disqus: 
+# gitment
 gitment:
+  enable: true
   github_id: 
   repo: 
   client_id: 
