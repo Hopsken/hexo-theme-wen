@@ -492,6 +492,12 @@ img {
     margin-top: 40px;
     font-size: 0;
 }
+.main-content {
+    min-height: calc(100vh - 210px);
+}
+.archive {
+    min-height: calc(100vh - 100px);
+}
 
 .archive-year {
     font-size: 2.5rem;
